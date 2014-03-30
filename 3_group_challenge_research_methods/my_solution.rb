@@ -50,17 +50,17 @@ end
 
 # Person 4
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete("thing_to_delete")
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+    source.delete_if {|key,value| value = #{num}}
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# I used the delete method on the array. The delete method deletes all items equal to the object in the parentheses.
+# For the hash, I used the delete_if method. The delete_if method deletes any item for which the block evaluates to true. I tried both evaluating
+# the key and the value from the pair and both ways work...so instead of the above you could also use key = #{name} inside the block for example.
 
 
 ################## DRIVER CODE ###################################
@@ -78,8 +78,8 @@ p my_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3
 p my_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
+# This assignment was pretty straightforward. I didn't have too many issues.
+# I did struggle a bit trying to figure out how to test the code. 
 # 
 # 
 # 
