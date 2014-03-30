@@ -5,6 +5,15 @@ describe 'median' do
   let(:array_2) { [4, 4, 5, 5, 6, 6, 6, 7] }
   let(:array_3) { [7, 4, 3, 5, 6, 2, 6, 4] }
   let(:array_4) { ["apple", "cherry", "banana"]}
+  
+  def median(array)
+  sort_array = array.sort
+  length = sort_array.length
+  
+  return(sort_array[(length-1)/2] + sort_array[length/2])/2.0
+  end
+
+
 
   it "is defined as a method" do
     defined?(median).should eq 'method'
