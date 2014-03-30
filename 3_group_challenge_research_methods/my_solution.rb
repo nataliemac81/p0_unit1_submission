@@ -54,13 +54,13 @@ def my_array_deletion_method(source, thing_to_delete)
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-    source.delete_if {|key,value| value = #{num}}
+    source.delete_if {|key,value| value = num}
 end
 
 # Identify and describe the ruby method you implemented. 
 # I used the delete method on the array. The delete method deletes all items equal to the object in the parentheses.
 # For the hash, I used the delete_if method. The delete_if method deletes any item for which the block evaluates to true. I tried both evaluating
-# the key and the value from the pair and both ways work...so instead of the above you could also use key = #{name} inside the block for example.
+# the key and the value from the pair and both ways work...so instead of the above you could also use key = name inside the block for example.
 
 
 ################## DRIVER CODE ###################################
