@@ -3,6 +3,14 @@ require_relative "my_solution"
 describe 'total' do
   let(:array_1) { [1, 2, 3, 4, 5, 5, 7] }
   let(:array_2) { [4, 4, 5, 5, 6, 6, 6, 7] }
+  
+  def total(array)
+  array.inject(0) {|total, i| total + i }
+  end
+
+def sentence_maker(array)
+    array.join(" ").capitalize + (".")
+end
 
   it "is defined as a method" do
     defined?(total).should eq 'method'
