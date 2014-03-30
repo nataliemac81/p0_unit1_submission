@@ -7,6 +7,24 @@ describe 'get_grade' do
   let(:arrayD) { [60,67,70,63]}
   let(:arrayF) { [50,40,0,99,9]}
   
+  def get_grade(array)
+  total = 0
+  array.each {|x| total = total += x }
+  average = total/array.length
+  
+  if average >= 90
+      return "A"
+      elsif average >= 80
+      return "B"
+      elsif average >= 70
+      return "C"
+      elsif average >= 60
+      return "D"
+      else
+      return "F"
+  end
+end
+
   it 'is defined as a method' do
     defined?(get_grade).should eq 'method'
   end
